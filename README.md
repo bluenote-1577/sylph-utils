@@ -20,6 +20,6 @@ See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-inf
 The following databases are currently supported 
 (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases):
 
-* [GTDB-R214](https://gtdb.ecogenomic.org/)  
-* [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5)
-* [SMAG](https://www.nature.com/articles/s41467-023-43000-z)
+1. [GTDB-R214](https://gtdb.ecogenomic.org/)  
+2. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5)
+3. [SMAG](https://www.nature.com/articles/s41467-023-43000-z)
