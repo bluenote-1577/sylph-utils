@@ -18,7 +18,7 @@ You have to use the metadata file corresponding to the database used. So if you 
 See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on how these taxonomy metadata files are defined and the resulting output.
 
 The following databases are currently supported 
-(with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases):
+(with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
 
 1. [GTDB-R214](https://gtdb.ecogenomic.org/) - `gtdb_r214_metadata.tsv.gz`
 2. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `ocean_dna_metadata.tsv.gz`
