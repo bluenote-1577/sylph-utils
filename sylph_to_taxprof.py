@@ -81,10 +81,21 @@ for sample_file, group_df in grouped:
     of.write(f"#SampleID\t{sample_file}\n")
     of.write("#clade_name\trelative_abundance\tsequence_abundance\tANI (if strain-level)\n")
 
-    sorted_keys = sorted(tax_abundance.keys())
-    for tax in sorted_keys:
-        if tax in ani_dict:
-            of.write(f"{tax}\t{tax_abundance[tax]}\t{seq_abundance[tax]}\t{ani_dict[tax]}\n")
+    level_to_key = dict()
+    for key in tax_abundance.keys():
+        level = len(key.split('|'))
+        if level not in level_to_key:
+            level_to_key[level] = [key]
         else:
-            of.write(f"{tax}\t{tax_abundance[tax]}\t{seq_abundance[tax]}\tNA\n")
+            level_to_key[level].append(key)
+
+    sorted_keys = sorted(level_to_key.keys())
+
+    for level in sorted_keys:
+        keys_for_level = sorted(level_to_key[level], key = lambda x: tax_abundance[x], reverse=True)
+        for tax in keys_for_level:
+            if tax in ani_dict:
+                of.write(f"{tax}\t{tax_abundance[tax]}\t{seq_abundance[tax]}\t{ani_dict[tax]}\n")
+            else:
+                of.write(f"{tax}\t{tax_abundance[tax]}\t{seq_abundance[tax]}\tNA\n")
 
