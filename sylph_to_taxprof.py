@@ -79,7 +79,7 @@ for sample_file, group_df in grouped:
 
     # Print the CAMI BioBoxes profiling format
     of.write(f"#SampleID\t{sample_file}\n")
-    of.write("#clade_name\trelative_abundance\tsequence_abundance\tANI (if strain-level)\n")
+    of.write("clade_name\trelative_abundance\tsequence_abundance\tANI (if strain-level)\n")
 
     level_to_key = dict()
     for key in tax_abundance.keys():
