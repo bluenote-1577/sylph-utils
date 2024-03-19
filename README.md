@@ -28,7 +28,10 @@ The following databases are currently supported
 _2024-03-19 - version 0.1_ 
 * Changed the format slightly. Removed the # in front of the header so you can read this with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
   
-## merge_sylph_taxprof.py - merge multiple taxonomic profiles from sylph_to_taxprof.py into a TSV table 
+## merge_sylph_taxprof.py - merge multiple taxonomic profiles
+
+Merge multiple taxonomic profiles from `sylph_to_taxprof.py` into a TSV table 
+
 ```sh
 python merge_sylph_taxprof.py *.sylphmpa --column {ANI, relative_abundance, sequence_abundance} -o output_table.tsv
 ```
