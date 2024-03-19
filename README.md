@@ -2,9 +2,7 @@
 
 This repository contains helper scripts for manipulating the output of [sylph](https://github.com/bluenote-1577/sylph). 
 
-### sylph_to_taxprof.py - obtaining taxonomic profiles
-
-Turn sylph's tsv output into a taxonomic profile.  
+### sylph_to_taxprof.py - obtaining taxonomic profiles from sylph's output
 
 ```sh
 python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o prefix_or_folder/
@@ -23,3 +21,8 @@ The following databases are currently supported
 1. [GTDB-R214](https://gtdb.ecogenomic.org/) - `gtdb_r214_metadata.tsv.gz`
 2. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `ocean_dna_metadata.tsv.gz`
 3. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `smag_metadata.tsv.gz`
+
+#### CHANGELOG
+
+_2024-03-19 - version 0.1_ 
+* Changed the format slightly. Removed the # in front of the header so you can read this with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`. 
