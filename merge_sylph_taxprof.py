@@ -13,8 +13,11 @@ def merge_data(files, column_name):
     if column_name == 'ANI':
         column_name = 'ANI (if strain-level)'
     for file in files:
+        with open(file) as f:
+            first_line = f.readline()
+            sample_name = first_line.split('\t')[1].strip()
         df = read_tsv(file, column_name)
-        df.rename(columns={column_name: file}, inplace=True)
+        df.rename(columns={column_name: sample_name}, inplace=True)
         if merged_df.empty:
             merged_df = df
         else:
