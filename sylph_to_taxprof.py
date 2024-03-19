@@ -12,6 +12,8 @@ parser = argparse.ArgumentParser(description='Convert a sylph output tsv file to
 parser.add_argument("-s", "--sylph", help="sylph output file", type=str, required=True)
 parser.add_argument("-o", "--output-prefix", help="prefix of the outputs. Output files will be prefix + Sample_file +.sylphmpa", type=str, default = "")
 parser.add_argument("-m", "--metadata", help = "metadata file converting genome files to taxnomic identifiers.", type = str, required=True) 
+#add versioning
+parser.add_argument('--version', action='version', version='%(prog)s 0.1')
 args = parser.parse_args()
 
 # Read sylph's output TSV file into a Pandas DataFrame
