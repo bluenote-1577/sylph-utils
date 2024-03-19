@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 import pandas as pd
 
@@ -21,11 +23,11 @@ def merge_data(files, column_name):
     return merged_df
 
 def main():
-    parser = argparse.ArgumentParser(description="Merge TSV files by taxonomic annotations.")
-    parser.add_argument('files', nargs='+', help='Paths to the TSV files')
-    parser.add_argument('-o', '--output', help='Output tsv file name', default='merged_data.tsv')
+    parser = argparse.ArgumentParser(description="Merge *.sylphmpa files output by sylph_to_taxprof.py into a table with samples. ")
+    parser.add_argument('files', nargs='+', help='Paths to the *.sylphmpa files (must be version > 0.1 since 03-19-2024)')
+    parser.add_argument('-o', '--output', help='Output tsv sample table file name', default='merged_data.tsv')
     parser.add_argument('--column', choices=['relative_abundance', 'sequence_abundance', 'ANI'], required=True,
-                        help='The data column to merge')
+                        help='The data type to output')
     args = parser.parse_args()
 
     merged_df = merge_data(args.files, args.column)
