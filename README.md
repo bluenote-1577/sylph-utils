@@ -12,7 +12,7 @@ python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o pr
 * `-o`: prepends this prefix to all of the output files; one output for each sample in the sylph output.
 * Output suffix is `.sylphmpa`.  
 
-You have to use the metadata file corresponding to the database used. So if you use the GTDB-R214 database for sylph, you have to use the `gtdb_r214_metadata.tsv.gz` file. 
+Use the metadata file corresponding to the database used. So if you use the GTDB-R214 database for sylph, you have to use the `gtdb_r214_metadata.tsv.gz` file. 
 
 See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on how these taxonomy metadata files are defined and the resulting output.
 
