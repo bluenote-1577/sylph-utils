@@ -2,6 +2,13 @@
 
 This repository contains helper scripts for manipulating the output of [sylph](https://github.com/bluenote-1577/sylph). 
 
+### Requirements/Install
+
+* Python3
+* Pandas
+
+Run `pip install pandas` if pandas is not installed. 
+
 ## sylph_to_taxprof.py - obtaining taxonomic profiles from sylph's output
 
 ```sh
