@@ -15,13 +15,15 @@ Run `pip install pandas` if pandas is not installed.
 python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o prefix_or_folder/
 ```
 * `-m`: taxonomy metadata file. Metadata files are present in this repository.
-* `-s`: the output from sylph. The database used has to coincide with the `-m` option. 
+* `-s`: the output from sylph. Sylph's database must be the same as the `-m` option's.
 * `-o`: prepends this prefix to all of the output files; one output for each sample in the sylph output.
 * Output suffix is `.sylphmpa`.  
 
-Use the metadata file corresponding to the database used. So if you use the GTDB-R214 database for sylph, you have to use the `gtdb_r214_metadata.tsv.gz` file. 
+Use the metadata file corresponding to the database used. E.g. if you use the GTDB-R214 database for sylph, you **must** use the `gtdb_r214_metadata.tsv.gz` file. 
 
-See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on how these taxonomy metadata files are defined and the resulting output.
+See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on how these taxonomy metadata files are defined and the output format. 
+
+* In python, you can read outputs with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
 
 The following databases are currently supported 
 (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
@@ -33,7 +35,7 @@ The following databases are currently supported
 #### CHANGELOG
 
 _2024-03-19 - version 0.1_ 
-* Changed the format slightly. Removed the # in front of the header so you can read this with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
+* Changed the format slightly. Removed the # in front of the header. 
   
 ## merge_sylph_taxprof.py - merge multiple taxonomic profiles
 
