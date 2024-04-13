@@ -30,9 +30,13 @@ python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o pr
 
 Use the metadata file corresponding to the database used. E.g. if you use the GTDB-R214 database for sylph, you **must** use the `gtdb_r214_metadata.tsv.gz` file. 
 
-See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on how these taxonomy metadata files are defined and the output format. 
+See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on 
 
-* In python, you can read outputs with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
+1. taxonomy metadata files definitions
+2. the output format
+3. how to create taxonomy metadata for customized genome databases
+
+Hint: in python, you can read outputs with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
 
 #### CHANGELOG
 
