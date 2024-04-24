@@ -5,7 +5,8 @@ This repository contains helper scripts for manipulating the output of [sylph](h
 ### Taxonomy integration - available databases 
 The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
 
-1. [GTDB-R214](https://gtdb.ecogenomic.org/) - `gtdb_r214_metadata.tsv.gz`
+1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `gtdb_r220_metadata.tsv.gz`
+1. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `gtdb_r214_metadata.tsv.gz`
 2. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `ocean_dna_metadata.tsv.gz`
 3. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `smag_metadata.tsv.gz`
 
@@ -28,7 +29,7 @@ python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o pr
 * `-o`: prepends this prefix to all of the output files; one output for each sample in the sylph output.
 * Output suffix is `.sylphmpa`.  
 
-Use the metadata file corresponding to the database used. E.g. if you use the GTDB-R214 database for sylph, you **must** use the `gtdb_r214_metadata.tsv.gz` file. 
+Use the metadata file corresponding to the database used. E.g. if you use the GTDB-R220 database for sylph, you **must** use the `gtdb_r220_metadata.tsv.gz` file. 
 
 See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-information-with-sylph#custom-taxonomies-and-how-it-works) for more information on 
 
