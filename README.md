@@ -5,12 +5,15 @@ This repository contains helper scripts for manipulating the output of [sylph](h
 ### Taxonomy integration - available databases 
 The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
 
-1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `gtdb_r220_metadata.tsv.gz`
-1. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `gtdb_r214_metadata.tsv.gz`
-2. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `ocean_dna_metadata.tsv.gz`
-3. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `smag_metadata.tsv.gz`
+1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `prokaryote/gtdb_r220_metadata.tsv.gz`
+2. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `prokaryote/gtdb_r214_metadata.tsv.gz`
+3. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `prokaryote/ocean_dna_metadata.tsv.gz`
+4. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `prokaryote/smag_metadata.tsv.gz`
+5. Refseq fungi representative genomes - `fungi/fungi_refseq_2024-07-25_metadata.tsv.gz`
+6. [IMG/VR 4.1 high-confidence viral OTU genomes] (https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
 
-
+> [!TIP]
+> Viral genomes, viral-host annotations, and fungi taxonomy information are now available since 2024-07-25 (v0.2 of `sylph_to_taxprof.py`)
 
 ### Requirements/Install
 
@@ -24,9 +27,10 @@ Run `pip install pandas` if pandas is not installed.
 ```sh
 python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o prefix_or_folder/
 ```
-* `-m`: taxonomy metadata file. Metadata files are present in this repository.
-* `-s`: the output from sylph. Sylph's database must be the same as the `-m` option's.
+* `-m`: taxonomy metadata file(s). Metadata files are of the form `tsv.gz` and present in this repository. Multiple taxonomy metadata files can be input (will be concatenated)
+* `-s`: the output from sylph. Sylph's databases must be the same as the `-m` option's.
 * `-o`: prepends this prefix to all of the output files; one output for each sample in the sylph output.
+* `--annotate-virus-hosts` (new in v0.2): annotates found viral genomes with host information metadata (only available for IMG/VR 4.1 right now) 
 * Output suffix is `.sylphmpa`.  
 
 Use the metadata file corresponding to the database used. E.g. if you use the GTDB-R220 database for sylph, you **must** use the `gtdb_r220_metadata.tsv.gz` file. 
@@ -40,6 +44,12 @@ See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-inf
 Hint: in python, you can read outputs with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
 
 #### CHANGELOG
+
+_2024-07-25 - version 0.2_
+
+* Added IMG/VR 4.1 taxonomy and fungi refseq taxonomy.
+* Added coverage information into the `.sylphmpa` files
+* Added capabilities to do viral-host annotation if the IMG/VR 4.1 metadata is used. 
 
 _2024-03-19 - version 0.1_ 
 * Changed the format slightly. Removed the # in front of the header. 

@@ -91,7 +91,7 @@ for sample_file, group_df in grouped:
         else:
             tax_str = 'NO_TAXONOMY;t__' + genome_file
             if not first_warn:
-                print(f"WARNING: No taxonomy information found for entry {genome_file} and contig {contig_id} in metadata files. Assigning default taxonomy and skipping future warnings.")
+                print(f"WARNING: No taxonomy information found for entry {genome_file} and contig {contig_id} in metadata files. Assigning default taxonomy")
 
         abundance = float(row['Sequence_abundance'])
         rel_abundance = float(row['Taxonomic_abundance'])
