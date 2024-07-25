@@ -10,7 +10,7 @@ The following databases are currently supported (with pre-built sylph databases 
 3. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `prokaryote/ocean_dna_metadata.tsv.gz`
 4. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `prokaryote/smag_metadata.tsv.gz`
 5. Refseq fungi representative genomes - `fungi/fungi_refseq_2024-07-25_metadata.tsv.gz`
-6. [IMG/VR 4.1 high-confidence viral OTU genomes] (https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
+6. [IMG/VR 4.1 high-confidence viral OTU genomes](https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
 
 > [!TIP]
 > Viral genomes, viral-host annotations, and fungi taxonomy information are now available since 2024-07-25 (v0.2 of `sylph_to_taxprof.py`)
