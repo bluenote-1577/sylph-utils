@@ -41,7 +41,8 @@ See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-inf
 2. the output format
 3. how to create taxonomy metadata for customized genome databases
 
-Hint: in python, you can read outputs with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
+> [!TIP]
+> In python/pandas, you can read the output with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
 
 #### CHANGELOG
 
