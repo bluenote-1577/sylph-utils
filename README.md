@@ -57,9 +57,6 @@ _2024-07-25 - version 0.2_
 * Added coverage information into the `.sylphmpa` files
 * Added capabilities to do viral-host annotation if the IMG/VR 4.1 metadata is used. 
 
-_2024-03-19 - version 0.1_ 
-* Changed the format slightly. Removed the # in front of the header. 
-  
 ## merge_sylph_taxprof.py - merge multiple taxonomic profiles
 
 Merge multiple taxonomic profiles from `sylph_to_taxprof.py` into a TSV table 
