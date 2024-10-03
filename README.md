@@ -46,6 +46,11 @@ See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-inf
 
 #### CHANGELOG
 
+_2024-10-03 - vresion 0.3_
+
+* The script now fails if it detects ambiguous sample names
+* Added the `-f` or `--add-folder-information` flag to include directory information into the output `.sylphmpa` files; this can disambiguate sample names.
+
 _2024-07-25 - version 0.2_
 
 * Added IMG/VR 4.1 taxonomy and fungi refseq taxonomy.
