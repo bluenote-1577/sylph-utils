@@ -18,8 +18,9 @@ parser.add_argument("-s", "--sylph", help="sylph output file", type=str, require
 parser.add_argument("-o", "--output-prefix", help="prefix of the outputs. Output files will be 'prefix + Sample_file_column + .sylphmpa'", type=str, default = "")
 parser.add_argument("-m", "--metadata", help = "metadata file(s) converting genome files to taxonomic identifiers. Multiple input files will be concatenated.", type = str, required=True, nargs='+')
 parser.add_argument("-a", "--annotate-virus-hosts", help = "add additional column(s) by integrating viral-host information available (currently available for IMGVR4.1)", action='store_true')
+parser.add_argument("-f", "--add-folder-information", help = "include directory/folder information to the outputs. This is needed if your samples have the same read name but different directory structures.", action='store_true')
 #add versioning
-parser.add_argument('--version', action='version', version='%(prog)s 0.2')
+parser.add_argument('--version', action='version', version='%(prog)s 0.3')
 args = parser.parse_args()
 annotate_virus = args.annotate_virus_hosts
 
@@ -54,12 +55,21 @@ for file in args.metadata:
 print(f"Processing sylph output file: {args.sylph} ...")
 grouped = df.groupby('Sample_file')
 
+outs = set()
+
 for sample_file, group_df in grouped:
     first_warn = False
-    out = sample_file.split('/')[-1]
+    if args.add_folder_information:
+        out = '_'.join(sample_file.split('/'))
+    else:
+        out = sample_file.split('/')[-1]
     out_file = args.output_prefix + out + '.sylphmpa'
-    of = open(out_file,'w')
     print(f"Writing output to: {out_file} ...")
+    if out_file in outs:
+        print(f"ERROR! Multiple .sylphmpa files have the same sample name, which will cause a file to be overwritten. Consider --add-folder-information to disambiguate sample files")
+        exit(1)
+    outs.add(out_file)
+    of = open(out_file,'w')
 
     tax_abundance = defaultdict(float)
     seq_abundance = defaultdict(float)
