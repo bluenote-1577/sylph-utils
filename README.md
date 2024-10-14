@@ -1,6 +1,6 @@
 # sylph-utils: utility scripts and taxonomy for [sylph](https://github.com/bluenote-1577/sylph)
 
-This repository contains helper scripts for manipulating the output of [sylph](https://github.com/bluenote-1577/sylph). 
+This repository contains scripts for incoporating taxonomic information into the output of [sylph](https://github.com/bluenote-1577/sylph). 
 
 ### Taxonomy integration - available databases 
 The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
