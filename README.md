@@ -3,7 +3,7 @@
 This repository contains scripts for incoporating taxonomic information into the output of [sylph](https://github.com/bluenote-1577/sylph). 
 
 ### Taxonomy integration - available databases 
-The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)):
+The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)) and can be found in the `prokaryote, fungi, virus` subfolders within this repository. 
 
 1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `prokaryote/gtdb_r220_metadata.tsv.gz`
 2. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `prokaryote/gtdb_r214_metadata.tsv.gz`
