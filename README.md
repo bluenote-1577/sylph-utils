@@ -25,9 +25,9 @@ Run `pip install pandas` if pandas is not installed.
 ## sylph_to_taxprof.py - obtaining taxonomic profiles from sylph's output
 
 ```sh
-python sylph_to_taxprof.py -m database_metadata.tsv.gz -s sylph_output.tsv -o prefix_or_folder/
+python sylph_to_taxprof.py -m database1_metadata.tsv.gz database2_metadata.tsv.gz -s sylph_output.tsv -o prefix_or_folder/
 ```
-* `-m`: taxonomy metadata file(s). Metadata files are of the form `tsv.gz` and present in this repository. Multiple taxonomy metadata files can be input (will be concatenated)
+* `-m`: taxonomy metadata file(s). Multiple taxonomy metadata files can be input (will be concatenated). Metadata files are of the form `tsv.gz` and present in this repository. (e.g. `prokaryote/gtdb_r220_metadata.tsv.gz`)
 * `-s`: the output from sylph. Sylph's databases must be the same as the `-m` option's.
 * `-o`: prepends this prefix to all of the output files; one output for each sample in the sylph output.
 * `--annotate-virus-hosts` (new in v0.2): annotates found viral genomes with host information metadata (only available for IMG/VR 4.1 right now) 
