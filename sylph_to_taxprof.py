@@ -20,7 +20,7 @@ parser.add_argument("-m", "--metadata", help = "metadata file(s) converting geno
 parser.add_argument("-a", "--annotate-virus-hosts", help = "add additional column(s) by integrating viral-host information available (currently available for IMGVR4.1)", action='store_true')
 parser.add_argument("-f", "--add-folder-information", help = "include directory/folder information to the outputs. This is needed if your samples have the same read name but different directory structures.", action='store_true')
 #add versioning
-parser.add_argument('--version', action='version', version='%(prog)s 0.3')
+parser.add_argument('--version', action='version', version='%(prog)s 0.4')
 args = parser.parse_args()
 annotate_virus = args.annotate_virus_hosts
 
