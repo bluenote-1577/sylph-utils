@@ -3,17 +3,18 @@
 This repository contains scripts for incoporating taxonomic information into the output of [sylph](https://github.com/bluenote-1577/sylph). 
 
 ### Taxonomy integration - available databases 
-The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)) and can be found in the `prokaryote, fungi, virus` subfolders within this repository. 
+The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)) and can be found in the `prokaryote, eukaryote, virus` subfolders within this repository. 
 
 1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `prokaryote/gtdb_r220_metadata.tsv.gz`
 2. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `prokaryote/gtdb_r214_metadata.tsv.gz`
 3. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `prokaryote/ocean_dna_metadata.tsv.gz`
 4. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `prokaryote/smag_metadata.tsv.gz`
-5. Refseq fungi representative genomes - `fungi/fungi_refseq_2024-07-25_metadata.tsv.gz`
-6. [IMG/VR 4.1 high-confidence viral OTU genomes](https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
+5. Refseq fungi representative genomes - `eukaryote/fungi_refseq_2024-07-25_metadata.tsv.gz`
+6. [TARA eukaryotic SMAGs](https://www.sciencedirect.com/science/article/pii/S2666979X22000477) - `eukaryote/tara_SMAGs_metadata.tsv.gz`
+7. [IMG/VR 4.1 high-confidence viral OTU genomes](https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
 
 > [!TIP]
-> Viral genomes, viral-host annotations, and fungi taxonomy information are now available since 2024-07-25 (v0.2 of `sylph_to_taxprof.py`)
+> Viral genomes, viral-host annotations, fungi taxonomy, and TARA eukaryoates are now available since 2024-11-05 (v0.4 of `sylph_to_taxprof.py`). See CHANGELOG.md for details. 
 
 ### Requirements/Install
 
@@ -43,19 +44,6 @@ See [here](https://github.com/bluenote-1577/sylph/wiki/Integrating-taxonomic-inf
 
 > [!TIP]
 > In python/pandas, you can read the output with `pd.read_csv('output.sylphmpa',sep='\t', comment='#')`.
-
-#### CHANGELOG
-
-_2024-10-03 - vresion 0.3_
-
-* The script now fails if it detects ambiguous sample names
-* Added the `-f` or `--add-folder-information` flag to include directory information into the output `.sylphmpa` files; this can disambiguate sample names.
-
-_2024-07-25 - version 0.2_
-
-* Added IMG/VR 4.1 taxonomy and fungi refseq taxonomy.
-* Added coverage information into the `.sylphmpa` files
-* Added capabilities to do viral-host annotation if the IMG/VR 4.1 metadata is used. 
 
 ## merge_sylph_taxprof.py - merge multiple taxonomic profiles
 

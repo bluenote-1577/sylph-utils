@@ -1,8 +1,8 @@
-#### CHANGELOG
+# CHANGELOG
 
 _2024-11-05 - version 0.4_
 
-Adding releases now. 
+Adding versioned releases since v0.3.0 in GitHub. 
 
 * Renamed `fungi` to `eukaryote`.
 * Added `eukaryote/tara_SMAGs_metadata.tsv.gz` for the TARA eukaryoatic SMAGs. 
