@@ -13,8 +13,8 @@ The following databases are currently supported (with pre-built sylph databases 
 6. [TARA eukaryotic SMAGs](https://www.sciencedirect.com/science/article/pii/S2666979X22000477) - `eukaryote/tara_SMAGs_metadata.tsv.gz`
 7. [IMG/VR 4.1 high-confidence viral OTU genomes](https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
 
-> [!TIP]
-> Viral genomes, viral-host annotations, fungi taxonomy, and TARA eukaryoates are now available since 2024-11-05 (v0.4 of `sylph_to_taxprof.py`). See CHANGELOG.md for details. 
+> [!IMPORTANT]
+> **(2024-11-05)**: `fungi` directory renamed -> `eukaryote`. TARA eukaryote taxonomy now available. See CHANGELOG.md for details. 
 
 ### Requirements/Install
 
