@@ -8,7 +8,7 @@ The following databases are currently supported (with pre-built sylph databases 
 1. [GTDB-R220 (April 2024)](https://gtdb.ecogenomic.org/stats/r220) - `prokaryote/gtdb_r220_metadata.tsv.gz`
 2. [GTDB-R214 (April 2023)](https://gtdb.ecogenomic.org/stats/r214) - `prokaryote/gtdb_r214_metadata.tsv.gz`
 3. [OceanDNA](https://doi.org/10.1038/s41597-022-01392-5) - `prokaryote/ocean_dna_metadata.tsv.gz`
-4. [SMAG](https://www.nature.com/articles/s41467-023-43000-z) - `prokaryote/smag_metadata.tsv.gz`
+4. [Soil MAGs (SMAG) from Ma et al.](https://www.nature.com/articles/s41467-023-43000-z) - `prokaryote/smag_metadata.tsv.gz`
 5. Refseq fungi representative genomes - `eukaryote/fungi_refseq_2024-07-25_metadata.tsv.gz`
 6. [TARA eukaryotic SMAGs](https://www.sciencedirect.com/science/article/pii/S2666979X22000477) - `eukaryote/tara_SMAGs_metadata.tsv.gz`
 7. [IMG/VR 4.1 high-confidence viral OTU genomes](https://genome.jgi.doe.gov/portal/IMG_VR/IMG_VR.home.html) - `virus/IMGVR_4.1_metadata.tsv.gz`
