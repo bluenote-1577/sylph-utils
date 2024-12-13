@@ -1,6 +1,9 @@
 # sylph-utils: utility scripts and taxonomy for [sylph](https://github.com/bluenote-1577/sylph)
 
-This repository contains scripts for incoporating taxonomic information into the output of [sylph](https://github.com/bluenote-1577/sylph). 
+This repository contains scripts for incorporating taxonomic information into the output of [sylph](https://github.com/bluenote-1577/sylph). 
+
+> [!WARNING]
+> sylph-utils is now replaced with [sylph-tax](https://github.com/bluenote-1577/sylph-tax). Sylph-tax offers a cleaner interface. Sylph-utils still works as of sylph v0.8 but will no longer be updated. 
 
 ### Taxonomy integration - available databases 
 The following databases are currently supported (with pre-built sylph databases [available here](https://github.com/bluenote-1577/sylph/wiki/Pre%E2%80%90built-databases)) and can be found in the `prokaryote, eukaryote, virus` subfolders within this repository. 
